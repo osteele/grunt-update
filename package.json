@@ -1,7 +1,7 @@
 {
   "name": "grunt-update",
   "description": "Run only those tasks whose source files have changed.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/osteele/grunt-update",
   "author": {
     "name": "Oliver Steele",
@@ -29,15 +29,15 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "coffee-script": ">= 1.6.x"
+    "coffee-script": ">= 1.6.0"
   },
   "devDependencies": {
-    "grunt": "~0.4.x",
-    "grunt-coffeelint": "0.0.x",
-    "grunt-contrib-clean": "~0.5.x",
-    "grunt-contrib-copy": "~0.4.x",
-    "grunt-contrib-nodeunit": "~0.2.x",
-    "load-grunt-tasks": "~0.1.x"
+    "grunt": "~0.4.1",
+    "grunt-coffeelint": "~0.0.7",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "load-grunt-tasks": "~0.1.0"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"

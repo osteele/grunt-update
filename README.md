@@ -28,22 +28,50 @@ In your project's Gruntfile, add a section named `update` to the data object pas
 ```js
 grunt.initConfig({
   update: {
-    app: {
-      tasks: ['copy', 'jade', 'sass']
-    },
+    tasks: ['task1', 'task2', 'task3']
   },
 })
 ```
 
-This configures the `update` and `update:app` tasks that act as though defined by:
+### Usage Examples
+
+There are three formats you can use to configure this task.
+
+#### Short
+```js
+update: { tasks: ['copy', 'jade', 'sass'] }
+```
+
+This configures an `update` task that acts as though defined by:
 
 ```js
-grunt.registerTask 'update:app', ['copy', 'jade', 'sass']
-grunt.registerTask 'update', ['update:app']
+grunt.registerTask 'update', ['copy', 'jade', 'sass']
 ```
 
 *except* that each of the `copy`, `jade`, and `sass` tasks will be executed *only* if their respective destination files
 either do not exist, or are out of date with respect to their source files.
+
+#### Medium
+```js
+update: {
+  app: ['copy:app', 'jade:app', 'sass:app']
+  libs: ['copy:libs', 'jade:libs', 'sass:libs']
+}
+```
+
+This configures `update:app` and `update:lib` tasks. (`update` runs them both.)
+
+#### Long
+```js
+update: {
+  app:
+    tasks: ['copy:app', 'jade:app', 'sass:app']
+  libs:
+    tasks: ['copy:libs', 'jade:libs', 'sass:libs']
+}
+```
+
+Like the *Medium* format, this configures `update:app` and `update:lib` tasks (and `update` runs them both.)
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).

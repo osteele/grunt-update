@@ -66,7 +66,10 @@ module.exports = (grunt) ->
 
   grunt.registerMultiTask 'update', description, ->
     try
-      tasks = this.data.tasks
+      tasks = this.data.tasks # Long format
+      tasks ?= this.data if grunt.util.kindOf(this.data) == 'array' # Medium format
+      tasks ?= grunt.config.get('update.tasks') # Short format
+      this.requiresConfig 'tasks' unless tasks
       outdatedTasks = tasks.filter(taskIsOutdated)
       grunt.task.run outdatedTasks
       return true
