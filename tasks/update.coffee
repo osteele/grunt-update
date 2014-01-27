@@ -1,5 +1,5 @@
 # grunt-update
-# https://github.com/osteele/grunt-contextualize
+# https://github.com/osteele/grunt-update
 #
 # Copyright (c) 2013 Oliver Steele
 # Licensed under the MIT license.
