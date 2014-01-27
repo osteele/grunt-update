@@ -1,5 +1,9 @@
 # grunt-update
 
+[![NPM version](https://badge.fury.io/js/grunt-update.png)](http://badge.fury.io/js/grunt-update)
+[![Build Status](https://api.travis-ci.org/osteele/grunt-update.png?branch-master)](https://api.travis-ci.org/osteele/grunt-update.png?branch-master)
+[![Build Status](https://david-dm.org/osteele/grunt-update.png)](https://david-dm.org/osteele/grunt-update.png)
+
 Run only those tasks whose source files are more recent than their destination targets.
 
 This is like [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch), but suitable for repeated
