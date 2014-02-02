@@ -26,12 +26,15 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "build": "coffee -o tasks --bare --compile --map src",
+    "prepublish": "npm run build",
+    "clean": "rm -f tasks/*.{js,map}",
+    "test": "npm run build && grunt test"
   },
   "dependencies": {
-    "coffee-script": ">=1.6.3"
   },
   "devDependencies": {
+    "coffee-script": ">=1.6.3",
     "grunt": "~0.4.2",
     "grunt-coffeelint": "~0.0.8",
     "grunt-contrib-clean": "~0.5.0",
@@ -46,5 +49,9 @@
   },
   "keywords": [
     "gruntplugin"
+  ],
+  "files": [
+    "tasks",
+    "LICENSE-MIT"
   ]
 }
