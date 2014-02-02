@@ -64,6 +64,7 @@ module.exports = (grunt) ->
     'clean', 'update:targetOne', 'nodeunit:targetOne',
     'clean', 'update:allTargets', 'nodeunit:allTargets',
     'clean', 'update:starTarget', 'nodeunit:allTargets',
-    'clean', 'copy:one', 'copy:chainedCopy', 'replaceIntermediateFile', 'update:chainedCopy', 'nodeunit:noticedUpdatedFile',
+    'clean', 'copy:one', 'copy:chainedCopy', 'replaceIntermediateFile',
+    'update:chainedCopy', 'nodeunit:noticedUpdatedFile',
   ]
   grunt.registerTask 'default', ['coffeelint']
