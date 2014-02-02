@@ -1,7 +1,7 @@
 {
   "name": "grunt-update",
   "description": "Run only those tasks whose source files have changed.",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "homepage": "https://github.com/osteele/grunt-update",
   "author": {
     "name": "Oliver Steele",
@@ -31,8 +31,7 @@
     "clean": "rm -f tasks/*.{js,map}",
     "test": "npm run build && grunt test"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "coffee-script": ">=1.7.1",
     "grunt": "~0.4.2",
